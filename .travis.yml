@@ -1,0 +1,12 @@
+env:
+  matrix:
+  - VERSION=0.0.1
+  global:
+    secure: kjq8TnH+uRBlbLfu2NKBHDEnYq0AmxCtJ1ybAkjHxczS3jE8Wnz0R9GFW6zHLfJD/MLOZh+eXcPg8N2y25lQLFhsbE0vzG5Pg8HbtlWYBqp2t5ul0IThaFQmWl7qX1ARO1yUBX3xkqrdrrcLu2Cmqh35mT0hmXBXtbgupCrgvkCbbNUe5fn77kEIj3l9+yVmbt893rGwYe37gLiqu8vnOO8EESDj6d6yrZCYp4QErfUhIEHJ/wfBpiwH1hwFYDz+QkAObR+aG2mk7a1q0TqJE7XcyyPE0J2i+RdPZH6vbBBetWuk+e1kG3V8ss1+f2PGeGqZ+LZSb3PCkGAuC8f84iCgrWjp+8yVCf4H6lsAI7FDWGHQ9Hd2PHC06Zn+591StmaRUeiux4w6wXyu15sXmK6dDocyTsbnrQBkYGj9IS90HtSUHFNErqA6xitr/mEcXEzo8o4oG8Y8cn1N5nMONz/OjftW7JCmpRspRuZFSsAXj49P9SEDI+sAS5ZMsXstyKMYbkzMq7vGUkRGcc8wJAFkbN6AQgnvxLpckYRUF3TNw+cUzU+wHDHne840b0xzg3DaFVC04H7V2WjRNXhl1czaeJF/AdViVc0c2/+zL0vkh2OVAIvUjuu3PCwB6IBLAKbxY+UWN9jBfTgJb169MaoMTfap1cL5IqcXZiWNSGU=
+
+services:
+- docker
+
+script:
+- docker build --build-arg VERSION="${VERSION}" -t temp-build .
+- docker run --rm temp-build --source https://api.nuget.org/v3/index.json --api-key $NUGET_API_KEY
