@@ -14,12 +14,18 @@ namespace Firepuma.HtmlBuilder
             _sections = new List<ISection>();
         }
 
+        public IBuilder AddSection(ISection section)
+        {
+            _sections.Add(section);
+            return this;
+        }
+
         public IBuilder AddTable(TableSection tableSection)
         {
             _sections.Add(tableSection);
             return this;
         }
-        
+
         public IBuilder AddError(ErrorSection error)
         {
             _sections.Add(error);
@@ -35,7 +41,7 @@ namespace Firepuma.HtmlBuilder
                 sb.AppendLine("<p>");
                 sb.AppendLine(section.GenerateHtmlBody());
                 sb.AppendLine("</p>");
-                
+
                 sb.AppendLine("<p> &nbsp; </p>");
             }
 

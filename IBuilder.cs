@@ -5,6 +5,7 @@ namespace Firepuma.HtmlBuilder
 {
     public interface IBuilder
     {
+        IBuilder AddSection(ISection section);
         IBuilder AddTable(TableSection tableSection);
         IBuilder AddError(ErrorSection error);
         string ToHtml();
