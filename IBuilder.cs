@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using HtmlBuilder.Sections;
+using Firepuma.HtmlBuilder.Sections;
 
-namespace HtmlBuilder
+namespace Firepuma.HtmlBuilder
 {
     public interface IBuilder
     {

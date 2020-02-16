@@ -1,4 +1,4 @@
-namespace HtmlBuilder.Sections
+namespace Firepuma.HtmlBuilder.Sections
 {
     public interface ISection
     {

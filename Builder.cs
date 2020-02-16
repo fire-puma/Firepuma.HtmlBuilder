@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using HtmlBuilder.Sections;
+using Firepuma.HtmlBuilder.Sections;
 
-namespace HtmlBuilder
+namespace Firepuma.HtmlBuilder
 {
     public class Builder : IBuilder
     {

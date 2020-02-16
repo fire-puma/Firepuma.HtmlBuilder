@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HtmlBuilder.Sections
+namespace Firepuma.HtmlBuilder.Sections
 {
     public class TableSection : ISection
     {
